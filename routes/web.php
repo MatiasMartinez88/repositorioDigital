@@ -17,9 +17,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/peliculas', function () {
+    return "listado de peliculas";
+});
+
+
+Route::get('register', function () {
+    return '';
+});
+
+Route::get('saludar/{nombre}/{apellido?}', function ($nombre,$apellido = "sin apellido") {
+       return "hola $nombre $apellido esperamos que disfrutes de nuestro sitio web y de todas las peliculas que ofrecemos :)" ;
+     });
+
+     Route::get('pelicula/{id}', function ($id) {
+             $vac=compact("id");
+               return view('listadoPeliculas',$vac) ;
+             });
+
 
 Auth::routes();
 
