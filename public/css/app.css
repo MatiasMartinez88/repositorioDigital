@@ -38,6 +38,12 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+@font-face{
+font-family:letra1;
+src: url(../fuentes/letra1.ttf);
+}
+
+
 *,
 *::before,
 *::after {
@@ -70,7 +76,7 @@ body {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #212529;
+  color: white;
   text-align: left;
   background-color: #f8fafc;
 }
@@ -3327,12 +3333,14 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #3490dc;
+  color: yellow;
   text-decoration: none;
+  font-family: fantasy;
+  font-size: 1.2rem;
 }
 
 .btn-link:hover {
-  color: #1d68a7;
+  color: red;
   text-decoration: underline;
 }
 
@@ -4971,6 +4979,7 @@ input[type=button].btn-block {
   color: #fff;
 }
 
+
 .card {
   position: relative;
   display: flex;
@@ -4979,9 +4988,22 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
+  z-index: 2;
+  border-radius: 0.5rem;
+  border: yellow 6px solid;
+  }
+
+.card::after{
+  position: absolute;
+  content: ' ';
+  background: linear-gradient(to top,#fdeff9, #7303c0,#ec38bc, #03001e);
+  width: 104%;
+  height: 108%;
+  filter: blur(10px);
+  z-index: -1;
+  left: -12px;
+  top: -17px;
+  }
 
 .card > hr {
   margin-right: 0;
@@ -5005,10 +5027,32 @@ input[type=button].btn-block {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.card-body {
+.card-body2 {
+  background-image: url(../imagenes/iconos.jpg);
+  background-size: cover;
+  background-position: center;
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  font-weight: bolder;
+  color: orange;
+  font-size: 1.2rem;
+text-shadow: 5px 5px 5px #000;
+}
+
+
+
+.card-body {
+  background-image: url(../imagenes/fondo22.jpg);
+  background-size: cover;
+  background-position: center;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  color: orange;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  text-shadow: 5px 5px 5px #fff;
 }
 
 .card-title {
@@ -5032,11 +5076,17 @@ input[type=button].btn-block {
   margin-left: 1.25rem;
 }
 
+
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  color: yellow;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-size: 1.2rem;
+  font-family:letra1;
+  text-shadow: 5px 5px 5px #fff;
+  text-align: center;
+
 }
 
 .card-header:first-child {
@@ -10932,4 +10982,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-

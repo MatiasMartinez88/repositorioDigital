@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/app.css">
     <title>Lista de peliculas</title>
+    <style >
+    h1, h2 {
+    color: blue;
+    }
+    </style>
   </head>
   <body>
     <h1>Peliculas</h1><br><br>
