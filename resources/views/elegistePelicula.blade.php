@@ -12,6 +12,6 @@
   </head>
   <body>
     <h1>Peliculas</h1><br><br>
-    <h2>elegiste la pelicula <?=$id?> esperamos que la disfrutes,no te olvides de puntuarla,gracias</h2>
+    <h2>elegiste la pelicula {{$id}} esperamos que la disfrutes,no te olvides de puntuarla,gracias</h2>
   </body>
 </html>

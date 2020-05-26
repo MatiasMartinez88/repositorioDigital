@@ -26,17 +26,15 @@
  @endsection
 
 @section("principal")
-<h1>MIS PELICULAS</h1>
+<h1>MIS GENEROS</h1>
 <ul>
-    @forelse ($peliculas as $pelicula)
+    @forelse ($generos as $genero)
        <li>
-         <p>{{$pelicula["title"]}}</p>
-            @unless ($pelicula["awards"]<5)
-                <p>exelente</p>
-            @endunless
+         <p>{{$genero["name"]}}</p>
+          
        </li>
   @empty
-    <p>no hay peliculas</p>
+    <p>no hay generos</p>
   @endforelse
 </ul>
 

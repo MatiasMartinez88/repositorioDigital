@@ -26,17 +26,15 @@
  @endsection
 
 @section("principal")
-<h1>MIS PELICULAS</h1>
+<h1>MIS ACTORES</h1>
 <ul>
-    @forelse ($peliculas as $pelicula)
+    @forelse ($actores as $actor)
        <li>
-         <p>{{$pelicula["title"]}}</p>
-            @unless ($pelicula["awards"]<5)
-                <p>exelente</p>
-            @endunless
+         <p>{{$actor->getNombreCompleto()}}</p>
+
        </li>
   @empty
-    <p>no hay peliculas</p>
+    <p>no hay actores</p>
   @endforelse
 </ul>
 

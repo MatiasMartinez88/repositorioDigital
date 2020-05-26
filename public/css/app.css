@@ -7,6 +7,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
@@ -73,12 +74,12 @@ section {
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.6;
-  color: white;
+  color: orange;
   text-align: left;
-  background-color: #f8fafc;
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {

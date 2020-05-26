@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-/*
+/* caja luminosa
 
 background: linear-gradient(90deg,#000,#323232);
 }
@@ -47,14 +47,24 @@ filter: blur(15px);
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get("/agregarActor", function () {
+    return view("agregarActor");
+});
+
+Route::post("/agregarActor", "actoresController@agregar");
 
 
+Route::get("/actores", "actoresController@listado");
 
 Route::get("/peliculas", "peliculasController@listado");
+
+Route::get("/generos", "generosController@listado");
+
 
 
 

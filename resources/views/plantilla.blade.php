@@ -7,12 +7,30 @@
     <section>
       @yield('imagen')
     </section>
+
+    <link rel="stylesheet" href="/css/app.css">
+
+<style media="screen">
+ footer{
+font-size: 1.5rem;
+  font-family: letra1;
+ position: relative;
+ color: white;
+ bottom: -5px;
+ left: 10px;
+}
+</style>
+
   </head>
   <body>
-    
+
     <section>
              @yield("principal")
     </section>
-  </body>
 
+
+     <footer>
+        Cine En Casa
+     </footer>
+  </body>
 </html>
