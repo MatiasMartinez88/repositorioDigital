@@ -1,12 +1,9 @@
 @extends("plantilla")
 
- @section('imagen')
+ @section('css')
   <style>
 
-     html,body{
-       background-image: url(/imagenes/fondoestirado4.jpg);
-       background-size:cover;
-       }
+
 
      p{
 
@@ -39,7 +36,6 @@
     <p>no hay peliculas</p>
   @endforelse
 </ul>
-
-
+{{$peliculas->links()}}
 
   @endsection

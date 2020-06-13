@@ -9,7 +9,7 @@ use App\genero;
 class generosController extends Controller
 {
   public function listado(){
-    $generos = genero::all();
+    $generos = genero::paginate(5);
 
       $vac = compact("generos");
       return view("listaGeneros",$vac);

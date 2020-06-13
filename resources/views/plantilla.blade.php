@@ -1,36 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <section>
-      @yield('imagen')
-    </section>
+  <html lang="en" dir="ltr">
 
-    <link rel="stylesheet" href="/css/app.css">
+    <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="/css/app.css">
 
-<style media="screen">
- footer{
-font-size: 1.5rem;
-  font-family: letra1;
- position: relative;
- color: white;
- bottom: -5px;
- left: 10px;
-}
-</style>
+         <title></title>
+
+        <section>
+             @yield('css')
+        </section>
+
+
+
+       <style>
+
+       body{
+
+           background-image: url(/imagenes/fondoestirado4.jpg);
+           background-size:cover;
+
+           height: 100vh;
+           background-position: center;
+
+         font-weight: 0.5rem;
+       }
+
+         footer{
+           font-size: 1.5rem;
+           font-family: letra1;
+           position: absolute;
+           color: white;
+
+           left: 10px;
+                       }
+
+           .footer{
+              position: absolute;
+                                }
+
+       </style>
 
   </head>
   <body>
 
-    <section>
+       <section>
              @yield("principal")
-    </section>
+       </section>
 
 
-     <footer>
-        Cine En Casa
-     </footer>
+       <footer>
+         Cine En Casa
+       </footer>
+
   </body>
+
 </html>

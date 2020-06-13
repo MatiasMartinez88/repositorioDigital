@@ -9,7 +9,7 @@ use App\pelicula;
 class peliculasController extends Controller
 {
   public function listado(){
-    $peliculas = pelicula::all();
+    $peliculas = pelicula::paginate(8);
 
       $vac = compact("peliculas");
       return view("listaPeliculas",$vac);

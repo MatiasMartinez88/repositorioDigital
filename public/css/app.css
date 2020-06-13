@@ -51,6 +51,10 @@ src: url(../fuentes/letra1.ttf);
   box-sizing: border-box;
 }
 
+.mio{
+  background: linear-gradient(to left, #03001e, #7303c0, #ec38bc, #fdeff9);
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -587,26 +591,38 @@ pre code {
   margin-left: auto;
 }
 
+
+  }
+
 @media (min-width: 576px) {
-  .container {
+  .content {
+    font-size: 1rem;
     max-width: 540px;
+  }
+  article{
+    width: 20%;
+    margin-left: 5%;
+    margin-right:5%;
   }
 }
 
 @media (min-width: 768px) {
   .container {
+    font-size: 1rem;
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
+      font-size: 1rem;
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
+      font-size: 1rem;
     max-width: 1140px;
   }
 }
@@ -852,6 +868,7 @@ pre code {
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
+  padding: 1%;
 }
 
 .order-first {
@@ -3297,14 +3314,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-dark {
-  color: #343a40;
-  border-color: #343a40;
+  color: white;
+  border-color: white;
 }
 
 .btn-outline-dark:hover {
-  color: #fff;
+
   background-color: #343a40;
-  border-color: #343a40;
+  border-color: yellow;
 }
 
 .btn-outline-dark:focus,
@@ -3473,6 +3490,9 @@ input[type=button].btn-block {
   right: 0;
   left: auto;
 }
+
+
+
 
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {
@@ -7103,7 +7123,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: yellow !important;
 }
 
 a.bg-light:hover,

@@ -9,15 +9,38 @@ use App\Actor;
 class actoresController extends Controller
 {
   public function listado(){
-    $actores = actor::all();
+    $actores = actor::paginate (7);
 
       $vac = compact("actores");
       return view("listaActores",$vac);
 }
 
   public function agregar(Request $req){
+
+  $reglas=[
+    "first_name"=>"string|min:3|max:10",
+    "last_name"=>"string|min:3|max:10",
+    "rating"=>"numeric|min:0|max:10",
+    "favorite_movie_id"=>"numeric",
+    "poster" => "file"
+   ];
+
+   $mensajes=[
+    "string"=> "El campo :attribute debe ser un texto",
+    "min"=> "El campo :attribute tiene un minimo de :min",
+    "max"=> "El campo :attribute tiene un maximo de :max",
+    "numeric"=> "El campo :attributte debe ser un numero",
+    ];
+
+     $this->validate($req, $reglas, $mensajes);
+
+
     $actorNuevo= new Actor();
 
+    $ruta= $req->file("poster")->store("public");
+    $nombreArchivo= basename($ruta);
+
+    $actorNuevo->poster= $nombreArchivo;
     $actorNuevo->first_name= $req ["first_name"];
     $actorNuevo->last_name=$req ["last_name"];
     $actorNuevo->rating=$req ["rating"];
