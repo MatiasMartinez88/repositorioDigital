@@ -95,8 +95,10 @@
                                         }
 
              .mio a{
+
+               font-size: 2.5vw;
                letter-spacing: 2px;
-               padding-left: 15px;
+               padding-left: 20px;
                                   }
 
 

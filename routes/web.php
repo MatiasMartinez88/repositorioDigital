@@ -66,15 +66,10 @@ Route::get("/peliculas", "peliculasController@listado");
 Route::get("/generos", "generosController@listado");
 
 
+Route::get('pelicula/{title}', "peliculasController@detalle");
 
 
-
-Route::get('saludar/{nombre}/{apellido?}', function ($nombre,$apellido = "sin apellido") {
-       return "hola $nombre $apellido esperamos que disfrutes de nuestro sitio web y de todas las peliculas que ofrecemos :)" ;
-     });
-
-     Route::get('pelicula/{id}', "peliculasController@detalle");
+Route::get('actor/{title}', "actoresController@detalle");
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');

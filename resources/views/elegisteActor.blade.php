@@ -1,4 +1,3 @@
-
 @extends("plantilla")
 
  @section('css')
@@ -36,29 +35,35 @@
 
 @section("principal")
 
-  <h1>Elegiste la pelicula {{$pelicula->title}} ,esperamos que la disfrutes,no te olvides de puntuarla,gracias</h1>
+  <h1>Elegiste a {{$actor->first_name}} ,estas son las pelicula en las que participa</h1>
 
 <div class="container">
   <ul>
 
-        <p> Pelicula: {{$pelicula->title}} </p>
-        <p> Premios: {{$pelicula->awards}} </p>
-        <p> Duración: {{$pelicula->length}} minutos </p>
-        @if($pelicula->genero)
-          <p>genero: {{$pelicula->genero->name}}</p>
-        @endif
+        <p> Primer nombre: {{$actor->first_name}} </p>
+        <p> Apellido: {{$actor->last_name}} </p>
+        <p> Puntuación: {{$actor->rating}}</p>
+
+
+        <p>peliculas : </p>
+            <ul>
+
+
+              @foreach ($actor->peliculas as $pelicula)
+             <li>
+  {{$actor->pelicula->actor_id->movie_id}}
+
+              </li>
+
+
+      @endforeach
+  </ul>
 
 
 
 
 
-            <p>Actores: </p>
 
-                  @foreach ($pelicula->actores as $actor)
-
-                  {{$actor->getNombreCompleto()}},
-
-         @endforeach
 
 
   </ul>

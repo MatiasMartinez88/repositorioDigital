@@ -26,10 +26,10 @@ class actoresController extends Controller
    ];
 
    $mensajes=[
-    "string"=> "El campo :attribute debe ser un texto",
-    "min"=> "El campo :attribute tiene un minimo de :min",
-    "max"=> "El campo :attribute tiene un maximo de :max",
-    "numeric"=> "El campo :attributte debe ser un numero",
+    "string"=> "El campo debe ser un texto",
+    "min"=> "El campo nombre y apellido tiene un minimo de :min caracteres",
+    "max"=> "El campo puntaje como actor tiene un maximo de :max",
+    "numeric"=> "El campo actuación favorita y puntaje debe ser un numero",
     ];
 
      $this->validate($req, $reglas, $mensajes);
@@ -50,5 +50,11 @@ class actoresController extends Controller
 
     return redirect("/actores");
 
+  }
+
+    public function detalle($id){
+    $actor = actor::find($id);
+    $vac = compact("actor","id");
+    return view("elegisteActor",$vac);
   }
 }

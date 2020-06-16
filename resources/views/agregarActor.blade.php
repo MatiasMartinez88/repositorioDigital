@@ -2,24 +2,42 @@
 
  @section('css')
 <style>
-  .container{
 
-    height: 80vh;
+  body{
+   color:white;
+               }
+
+  .container{
+   height: 80vh;
    display: flex;
    justify-content: center;
-
-  }
-
-  fieldset{
-
-    position: relative;
-  }
-
-  .agregarActor {
-    position: absolute;
-    display: flex;
-    justify-content: center;
                             }
+
+  label{
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    font-family: Impact, Charcoal, sans-serif;
+                                               }
+
+  h1{
+
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 7px 7px 5px #333333;
+                                     }
+
+.row{
+  margin-top: 20px;
+  box-shadow: 7px 7px 7px #350F65 ;
+  border:#1B0635  3px solid;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  padding-left: 10%;
+  background: url(/imagenes/actores.jpg);
+  background-size: 100%;
+                         }
 
 
 </style>
@@ -39,8 +57,10 @@
 
 
 
-  <h1 align="center">Agregar actor a la base de datos</h1>
+  <h1 align="center">AGREGAR ACTOR A LA BASE DE DATOS</h1>
    <div class="container">
+
+<div class="row col-8">
 
 
 
@@ -73,5 +93,5 @@
   </form>
 
   </div>
-
+</div>
     @endsection

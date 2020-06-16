@@ -4,9 +4,11 @@
   <style>
 
 
+
      p{
 
        color:yellow;
+       font-size: 2vw;
        }
 
 
@@ -46,7 +48,7 @@
           <ul>
           @forelse ($actores as $actor)
               <li>
-                   <p>{{$actor->getNombreCompleto()}}</p>
+                   <p><a href="/actor/{{$actor->id}}">{{$actor->getNombreCompleto()}}</a></p>
               </li>
           @empty
              <p>no hay actores</p>

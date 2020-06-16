@@ -20,30 +20,28 @@
 
            background-image: url(/imagenes/fondoestirado4.jpg);
            background-size:cover;
-
            height: 100vh;
            background-position: center;
+           font-weight: 0.5rem;
+                                }
 
-         font-weight: 0.5rem;
-       }
 
          footer{
            font-size: 1.5rem;
            font-family: letra1;
            position: absolute;
            color: white;
-
            left: 10px;
+           bottom: 10px;
                        }
 
-           .footer{
-              position: absolute;
-                                }
+
 
        </style>
 
   </head>
   <body>
+
 
        <section>
              @yield("principal")
@@ -53,7 +51,7 @@
        <footer>
          Cine En Casa
        </footer>
-
+  
   </body>
 
 </html>

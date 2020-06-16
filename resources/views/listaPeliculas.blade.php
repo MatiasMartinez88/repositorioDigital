@@ -27,10 +27,7 @@
 <ul>
     @forelse ($peliculas as $pelicula)
        <li>
-         <p>{{$pelicula["title"]}}</p>
-            @unless ($pelicula["awards"]<5)
-                <p>exelente</p>
-            @endunless
+         <p><a href="/pelicula/{{$pelicula->id}}">{{$pelicula["title"]}}</a></p>
        </li>
   @empty
     <p>no hay peliculas</p>

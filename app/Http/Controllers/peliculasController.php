@@ -16,7 +16,8 @@ class peliculasController extends Controller
   }
 
   public function detalle($id){
-    $vac = compact("id");
+    $pelicula = pelicula::find($id);
+    $vac = compact("pelicula","id");
     return view("elegistePelicula",$vac);
   }
 
