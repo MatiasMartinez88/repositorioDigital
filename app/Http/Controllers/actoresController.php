@@ -37,10 +37,7 @@ class actoresController extends Controller
 
     $actorNuevo= new Actor();
 
-    $ruta= $req->file("poster")->store("public");
-    $nombreArchivo= basename($ruta);
 
-    $actorNuevo->poster= $nombreArchivo;
     $actorNuevo->first_name= $req ["first_name"];
     $actorNuevo->last_name=$req ["last_name"];
     $actorNuevo->rating=$req ["rating"];

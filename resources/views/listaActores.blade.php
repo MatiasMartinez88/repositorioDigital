@@ -4,39 +4,36 @@
   <style>
 
 
-
      p{
-
+       font-size: 30px;
        color:yellow;
-       font-size: 2vw;
-       }
-
+                     }
 
      h1{
         position: relative;
         top: 20px;
         font-family: letra1;
         text-align: center;
-        color: orange; }
+        color: orange;
+                       }
 
 
        .fluor{
-         position: relative;
-         left: 40px;
-         background-color:
+         position: absolute;
+         right: 40px;
+         bottom: 60px;
+                      }
 
-       }
        .boton{
-
          background-color: orange;
          font-family: fantasy;
          text-shadow: 5px 5px 5px black;
          border-radius: 25px;
-       }
-       .boton a{
+                              }
 
-         color: white;
-       }
+       .boton a{
+        color: white;
+                      }
 
   </style>
  @endsection

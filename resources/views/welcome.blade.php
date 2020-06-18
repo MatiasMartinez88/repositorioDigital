@@ -39,55 +39,50 @@
               background-position: center;
 
               width: 100%;
-
               font-family: fantasy;
-                height: 100vh;
-                margin: 0;
-            }
+              height: 100vh;
+              margin: 0;
+                         }
 
 
 
 
             .full-height {
-                height: 90vh;
-            }
+             height: 90vh;
+                          }
 
 
 
             .position-ref {
                 position: relative;
-            }
+                                    }
 
             .top-right {
-                position: absolute;
-
-                left: 60px;
-                top: 18px;
-            }
+              position: absolute;
+              left: 60px;
+              top: 18px;
+                         }
 
             .top-right a{
-
                 padding: 5px;
                 letter-spacing:normal;
-
-            }
+                                      }
 
 
 
             .title {
                 font-size: 84px;
                 top: 50px;
-            }
+                           }
 
              a {
                 color:yellow ;
-
                 font-size: 20px;
                 text-shadow: 5px 5px 5px black;
                 letter-spacing: 1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-                }
+                                          }
 
                 a:hover {
                   color: #F0E68C;
@@ -95,7 +90,6 @@
                                         }
 
              .mio a{
-
                font-size: 2.5vw;
                letter-spacing: 2px;
                padding-left: 20px;
@@ -109,28 +103,23 @@
                              }
 
             .titulo{
-
               margin-top: 10px;
                                }
 
              .botones{
-
-              bottom: 20px;
+               bottom: 20px;
                             }
 
               button.btn-outline-dark{
                 display:flex;
                justify-content: center;
                border: white 3px solid;
-              }
+                                        }
 
               div.col-xl-3.col-lg-4.col-md-4.col-sm-12.col-12{
               display:flex;
               justify-content:center;
-
-
-
-              }
+                                      }
 
              .container-fluid{
                 height: 70vh;
@@ -195,6 +184,7 @@
                   </div>
             </div>
       </div>
+
   </div>
       <div class="container botones">
           <div class="row justify-content-around">

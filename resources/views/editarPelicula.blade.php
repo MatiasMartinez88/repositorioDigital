@@ -4,7 +4,7 @@
 <style>
 
   body{
-   color:white;
+   color:gold;
                }
 
   .container{
@@ -14,7 +14,7 @@
                             }
 
   label{
-    color: white;
+    color: red;
     text-shadow: 5px 5px 5px black;
     font-family: Impact, Charcoal, sans-serif;
                                                }
@@ -26,6 +26,8 @@
                                      }
 
 .row{
+
+  color: blue;
   margin-top: 20px;
   box-shadow: 7px 7px 7px #350F65 ;
   border:#1B0635  3px solid;
@@ -35,7 +37,7 @@
   justify-content: center;
   font-size: 2vw;
   padding-left: 10%;
-  background: url(/imagenes/actores.jpg);
+  background: url(/imagenes/fondo5.jpg);
   background-size: 100%;
                          }
 
@@ -57,7 +59,7 @@
 
 
 
-  <h1 align="center">AGREGAR ACTOR A LA BASE DE DATOS</h1>
+  <h1 align="center">EDITAR PELICULAS EN LA BASE DE DATOS</h1>
    <div class="container">
 
 <div class="row col-8">
@@ -67,26 +69,29 @@
 <form class="agregarActor" action="agregarActor" method="POST" enctype="multipart/form-data">
   {{csrf_field()}}
 
+  <div>
+      <label for="titulo">Pelicula a editar</label>
+      <input type="text" name="title" value="{{old("title")}}">
+  </div>
+    <div>
+        <label for="titulo">Nuevo titulo:</label>
+        <input type="text" name="title" value="{{old("title")}}">
+    </div>
+    <div>
+        <label for="rating">puntaje:</label>
+        <input type="text" name="rating" value="{{old("rating")}}">
+    </div>
+    <div>
+        <label for="premios">Genero:</label>
+        <input type="number" name="genero" id="genero"/>
+    </div>
+    <div>
+        <label for="duracion">Actores:</label>
+        <input type="text" name="actor" id="actor"/>
+    </div>
 
-    <div>
-        <label for="titulo">Primer nombre:</label>"
-        <input type="text" name="first_name" value="{{old("first_name")}}">
-    </div>
-    <div>
-        <label for="rating">Apellido:</label>
-        <input type="text" name="last_name" value="{{old("last_name")}}">
-    </div>
-    <div>
-        <label for="premios">Puntaje como actor:</label>
-        <input type="number" name="rating" id="premios"/>
-    </div>
-    <div>
-        <label for="duracion">Actuación favorita:</label>
-        <input type="text" name="favorite_movie_id" id="duracion"/>
-    </div>
-  
 
-    <input type="submit" value="Agregar Actor" name="submit"/>
+    <input type="submit" value="Editar pelicula" name="submit"/>
   </form>
 
   </div>

@@ -56,6 +56,11 @@ Route::get("/agregarActor", function () {
     return view("agregarActor");
 });
 
+Route::get("/editarPelicula", function () {
+    return view("editarPelicula");
+});
+
+
 Route::post("/agregarActor", "actoresController@agregar");
 
 
